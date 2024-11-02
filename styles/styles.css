@@ -37,7 +37,7 @@ a {
 }
 
 header {
-  height: 100vh;
+  min-height: 100vh;
   color: var(--color-white);
   overflow: hidden;
 }
@@ -51,7 +51,8 @@ section {
   padding: 3rem 18rem;
 }
 
-.section {
+.container {
+  display: none;
   transform: translateY(-100%) scale(0);
   transition: all 0.4s ease-in-out;
   background-color: var(--color-primary);
@@ -93,6 +94,13 @@ section {
   justify-content: center;
   transform: translateY(-50%);
 }
+.controls .active-btn {
+  background-color: var(--color-secondary) !important;
+  transition: all 0.4s ease-in-out;
+}
+.controls .active-btn i {
+  color: var(--color-white) !important;
+}
 .controls .control {
   padding: 1rem;
   cursor: pointer;
@@ -104,7 +112,12 @@ section {
   justify-content: center;
   align-items: center;
   margin: 0.7rem 0;
-  box-shadow: var() var(--box-shadow-1);
+  box-shadow: var(--box-shadow-1);
+}
+.controls .control i {
+  font-size: 1.4rem;
+  color: var(--color-grey-2);
+  pointer-events: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
