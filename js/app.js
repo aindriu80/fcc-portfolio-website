@@ -10,6 +10,28 @@ function PageTransitions() {
       this.classList.add('active-btn'); // Use classList.add for better practice
     });
   }
+
+  // Sections active class 
+  allSections.addEventListener('click', (e) => {
+    const id = e.target.dataset.id;
+    if (id) {
+      // remove selected from other btns 
+      sectBtns.forEach((btn) => {
+        btn.classList.remove('active')
+      })
+      e.target.classList.add('active')
+
+      // hide other sections.
+      sections.forEach((section) => {
+        section.classList.remove('active')
+      })
+
+      const element = document.getElementById(id)
+      element.classList.add('active')
+
+    }
+  })
+
 }
 
 PageTransitions();
