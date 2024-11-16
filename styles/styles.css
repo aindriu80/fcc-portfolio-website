@@ -394,7 +394,7 @@ section {
 .portfolios .portfolio-item img {
   width: 100%;
   height: 300px;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 15px;
 }
 .portfolios .portfolio-item .hover-items {
@@ -445,6 +445,11 @@ section {
 }
 .portfolios .portfolio-item .hover-items .icons .icon:hover i {
   color: var(--color-primary);
+}
+
+.portfolio-item:hover .hover-items {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .btn-container {
