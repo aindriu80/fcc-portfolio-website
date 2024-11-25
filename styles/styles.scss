@@ -1,3 +1,4 @@
+//reset browser default 
 * {
   margin: 0;
   padding: 0;
@@ -54,6 +55,10 @@ header {
   min-height: 100vh;
   color: var(--color-white);
   overflow: hidden;
+
+  @media screen and (max-width:610px) {
+    min-height: 100vh;
+  }
 }
 
 section {
@@ -821,3 +826,5 @@ section {
     }
   }
 }
+
+@import './media';
